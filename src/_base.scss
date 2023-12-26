@@ -1,0 +1,59 @@
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;400;500;600;800&family=Poppins:wght@200;300;400;500;600&display=swap");
+
+:root {
+  font-family: "Archivo", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.bodyContainer {
+  display: flex;
+}
+
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  // @include respond(tab-land) { // width < 1200?
+  //     font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  // }
+
+  // @include respond(tab-port) { // width < 900?
+  //     font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  // }
+
+  // @include respond(big-desktop) {
+  //     font-size: 75%; //1rem = 12, 12/16
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $primaryColor;
+
+  // @include respond(tab-port) {
+  //   padding: 0;
+  // }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+// .bodyLayout {
+//   disp
+// }
+
+// ::selection {
+//   background-color: $primaryColor;
+//   color: $color-white;
+// }

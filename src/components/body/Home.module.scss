@@ -1,0 +1,96 @@
+@import "../../variables";
+
+.HomeContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  padding-top: 6.8rem;
+}
+
+.homeTextBox {
+  grid-row: 1;
+  grid-column: 1;
+  padding: 40rem 0 10rem 15vw;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    font-size: 6rem;
+    color: $fontColor;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    color: $fontColor;
+  }
+
+  // &__button {
+  //   display: flex;
+  //   margin: 2rem 10rem 2rem auto;
+  //   padding: 1rem 2rem;
+  //   border-radius: 50px;
+  //   background-color: $secondaryColor;
+  //   border: none;
+  //   color: $fontColor;
+  //   font-size: $baseFontSize;
+  //   cursor: pointer;
+  // }
+}
+
+.orange {
+  color: $secondaryColor;
+}
+
+.techStack {
+  grid-row: 2;
+  grid-column: 1/-1;
+  background-color: $greyColor;
+  height: 12rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    color: $fontColor;
+    font-size: $headingFontSize;
+    // margin-left: 10vw;
+  }
+
+  &__divider {
+    width: 0.2rem;
+    height: 80%;
+    background-color: $secondaryColor;
+    border-radius: 20%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+
+    &_icon {
+      max-height: 7rem;
+      margin: 0 4rem;
+    }
+  }
+}
+
+.imageContainer {
+  justify-self: center;
+  grid-column: 2/-1;
+  grid-row: 1;
+  position: relative;
+}
+
+.MyImg {
+  height: 45rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
