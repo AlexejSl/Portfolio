@@ -9,7 +9,7 @@
   left: 50%;
   color: $secondaryColor;
   font-size: $headingFontSizeBig;
-  font-weight: 400;
+  font-weight: 600;
   padding: 8rem;
 }
 
@@ -25,7 +25,8 @@
   display: flex;
   flex-direction: column;
   background-color: $greyColor;
-  max-width: 55rem;
+  max-width: 50rem;
+  height: 78rem;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
@@ -40,8 +41,9 @@
     align-self: center;
     padding: 1.5rem 100%;
     font-size: $headingFontSize;
-    color: $secondaryColor;
+    color: $fontColor;
     font-weight: 600;
+    white-space: nowrap;
     // background-color: $secondaryGreyColor;
   }
 
@@ -66,21 +68,17 @@
   }
 
   &__links {
-    font-size: $baseFontSize;
-    font-size: 1.8rem;
-    color: $fontColor;
-    padding: 1rem 2rem;
-
     &_flex {
       display: flex;
       gap: 3rem;
       padding: 1rem;
+      margin-top: auto;
     }
 
     &_icon {
       font-size: 5rem;
       cursor: pointer;
-      color: $secondaryColor;
+      color: $fontColor;
     }
   }
 }

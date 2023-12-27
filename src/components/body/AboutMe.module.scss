@@ -1,0 +1,71 @@
+@import "../../variables";
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  margin: 8rem 0;
+  background-color: $greyColor;
+  align-items: center;
+
+  &__header {
+    margin-top: 4rem;
+    font-size: $headingFontSizeBig;
+    color: $secondaryColor;
+  }
+
+  &__text {
+    font-family: "poppins";
+    padding: 4rem 15vw;
+    font-size: $baseFontSize;
+    color: $fontColor;
+  }
+}
+
+.courses {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__header {
+    font-size: $headingFontSize;
+    color: $secondaryColor;
+  }
+
+  &__box {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 22rem;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: $primaryColor;
+    text-decoration: none;
+
+    &_img {
+      width: 100%;
+    }
+
+    &_text {
+      font-family: "poppins";
+      font-weight: 500;
+      font-size: $baseFontSize;
+      color: $fontColor;
+
+      padding: 4rem 1rem;
+    }
+
+    // &_date {
+    //   font-family: "poppins";
+    //   font-size: $baseFontSize;
+    //   color: $fontColor;
+    // }
+  }
+}

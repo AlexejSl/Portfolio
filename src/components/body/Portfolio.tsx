@@ -12,11 +12,6 @@ function Portfolio() {
         <div className={styles.project1}>
           <img src={placeholder_img} className={styles.project1__image} />
           <h3 className={styles.project1__header}>PokeCards</h3>
-          {/* <p
-            className={`${styles.project1__text_header} ${styles.margin_adjustment}`}
-          >
-            Project Overview
-          </p> */}
           <p className={styles.project1__text}>
             The Pokecards is a web application designed for pokémon card
             collectors.
@@ -43,7 +38,28 @@ function Portfolio() {
             <TbWorldWww className={styles.project1__links_icon} />
           </div>
         </div>
-        <div className={styles.project2}></div>
+
+        <div className={styles.project2}>
+          <img src={placeholder_img} className={styles.project1__image} />
+          <h3 className={styles.project2__header}>My portfolio website</h3>
+          <p className={styles.project1__text_header}>Project Overview</p>
+          <p className={styles.project2__text}>
+            This portfolio website is a place where you can get to know me
+            better, check out my projects, and drop me a message if you are
+            interested in working with me.
+          </p>
+
+          <p className={styles.project2__text}>
+            I aimed to put my{" "}
+            <span className={styles.project1__text_start}>TypeScript</span>{" "}
+            skills into action by working on this project. I wanted to apply
+            what I learned from a helpful Udemy course, making it a practical
+            experience to strengthen my grasp of TypeScript.
+          </p>
+          <div className={styles.project2__links_flex}>
+            <IoLogoGithub className={styles.project2__links_icon} />
+          </div>
+        </div>
       </div>
     </div>
   );
