@@ -7,7 +7,7 @@ import typescript_course from "../../assets/typescript_course.jpg";
 
 function AboutMe() {
   return (
-    <div className={styles.aboutMe}>
+    <div className={styles.aboutMe} id="AboutMe">
       <h2 className={styles.aboutMe__header}>About me</h2>
       <p className={styles.aboutMe__text}>
         Hello, my name is Alexej, and I graduated with a Bachelor's degree in

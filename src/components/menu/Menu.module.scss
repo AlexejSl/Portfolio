@@ -30,6 +30,7 @@
     border: none;
     color: $fontColor;
     font-size: $headingFontSize;
+    cursor: pointer;
   }
 }
 
@@ -57,4 +58,7 @@
 
 .active {
   color: $secondaryColor;
+  margin: 0 0.5rem;
+  border: 3px solid $secondaryColor;
+  padding: 0.3rem;
 }

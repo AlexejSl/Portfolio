@@ -4,7 +4,7 @@ import TechStackList from "./TechStackList";
 
 function Home() {
   return (
-    <div className={styles.HomeContainer}>
+    <div className={styles.HomeContainer} id="Home">
       <div className={styles.homeTextBox}>
         <h1 className={styles.homeTextBox__header}>
           Hi, my name is <span className={styles.orange}>Alexej</span>

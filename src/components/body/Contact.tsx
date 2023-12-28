@@ -5,7 +5,7 @@ import githubSVG from "../../assets/githubSVG.svg";
 
 function Contact() {
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} id="Contact">
       <h2 className={styles.contact__header}>Contact</h2>
       <div className={styles.contact__box}>
         <div className={styles.contact__item}>

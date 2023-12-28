@@ -1,12 +1,11 @@
 import styles from "./Portfolio.module.scss";
 import placeholder_img from "../../assets/placeholder_img.jpg";
-import { LuClipboardList } from "react-icons/lu";
 import { TbWorldWww } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io";
 
 function Portfolio() {
   return (
-    <div className={styles.portfolioContainer}>
+    <div className={styles.portfolioContainer} id="Portfolio">
       <h2 className={styles.header}>My projects</h2>
       <div className={styles.portfolioContainer__flex}>
         <div className={styles.project1}>

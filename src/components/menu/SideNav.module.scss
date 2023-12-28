@@ -1,0 +1,43 @@
+@import "../../variables";
+
+.sideNav {
+  position: fixed;
+  top: 50%;
+  left: 3rem;
+
+  &__item {
+    font-size: $baseFontSize;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: $fontColor;
+      padding: 0.5rem;
+      margin-right: 1rem;
+      transition: all 0.7s ease;
+    }
+
+    &_active {
+      font-size: $baseFontSize;
+      color: $secondaryColor;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 3rem;
+        height: 1.2rem;
+        border-radius: 10px;
+        background-color: $secondaryColor;
+        margin-right: 1rem;
+        margin-left: 0.5rem;
+        transition: all 0.7s ease;
+      }
+    }
+  }
+}
