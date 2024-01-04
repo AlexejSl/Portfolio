@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   &__header {
     font-size: $headingFontSizeBig;
@@ -16,6 +17,17 @@
     align-items: center;
     margin: 16rem 0 24rem 0;
     gap: 8rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 8rem 0 12rem 0;
+      gap: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      gap: 1rem;
+      margin: 4rem 0 6rem 0;
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -23,16 +35,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 
     &_img {
       max-width: 15rem;
       width: 100%;
       margin: 2rem;
+
+      @media only screen and (max-width: $bp-small) {
+        max-width: 10rem;
+      }
     }
 
     &_text {
       font-size: $headingFontSize;
       color: $fontColor;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: $baseFontSize;
+      }
     }
   }
 }

@@ -11,7 +11,7 @@ function LanguageMenu() {
   return (
     <div className={styles.languageContainer}>
       <p className={styles.languageSwitch}>
-        Language:{" "}
+        <span className={styles.languageText}>Language:</span>
         <button className={`${styles.languageSwitch__en} ${styles.active}`}>
           {isEnglish ? "En" : "Sk"}
         </button>

@@ -7,6 +7,7 @@
   width: 100%;
   height: 6.8rem;
   background-color: $primaryColor;
+  z-index: 2;
 }
 
 .menu {
@@ -22,7 +23,10 @@
     padding: 0 2rem;
     display: flex;
     justify-content: center;
-    color: $fontColor;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 0.8rem;
+    }
   }
 
   &__button {
@@ -31,6 +35,16 @@
     color: $fontColor;
     font-size: $headingFontSize;
     cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      transform: translateY(-2px);
+      color: $secondaryColor;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 2.2rem;
+    }
   }
 }
 
@@ -39,6 +53,18 @@
   top: 50%;
   right: 3rem;
   transform: translate(-50%, -50%);
+  z-index: 1;
+
+  @media only screen and (max-width: $bp-medium) {
+    right: -4rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    top: 95%;
+    padding: 1rem;
+    border-radius: 5px;
+    position: fixed;
+  }
 }
 
 .languageSwitch {
@@ -47,18 +73,38 @@
   font-weight: 500;
 }
 
+.languageText {
+  @media only screen and (max-width: $bp-small) {
+    display: none;
+  }
+}
+
 .languageSwitch__en,
 .languageSwitch__sk {
   background-color: transparent;
-  border: none;
+  border: 3px solid $fontColor;
+  padding: 0.3rem;
   font-size: $baseFontSize;
   color: $fontColor;
   cursor: pointer;
+  transition: all 0.3s;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0.5rem;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    background-color: $primaryColor;
+  }
+
+  &:hover {
+    padding: 0.6rem;
+    border: 3px solid $secondaryColor;
+  }
 }
 
 .active {
   color: $secondaryColor;
+  border-color: $secondaryColor;
   margin: 0 0.5rem;
-  border: 3px solid $secondaryColor;
-  padding: 0.3rem;
+  cursor: default;
 }

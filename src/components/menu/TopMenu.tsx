@@ -1,7 +1,31 @@
+import { useLanguage } from "../../store/LanguageContext";
 import LanguageMenu from "./LanguageMenu";
 import styles from "./Menu.module.scss";
+import { type languageObj } from "./SideNav";
 
-function TopMenu() {
+const languageObj: languageObj = {
+  en: {
+    home: "Home",
+    portfolio: "Portfolio",
+    aboutMe: "About me",
+    contact: "Contact",
+  },
+  sk: {
+    home: "Domov",
+    portfolio: "Portfólio",
+    aboutMe: "O mne",
+    contact: "Kontakt",
+  },
+};
+
+type TopMenuProps = {
+  windowWidth: number;
+};
+
+function TopMenu({ windowWidth }: TopMenuProps) {
+  const { isEnglish } = useLanguage();
+  const currentLanguage = isEnglish ? languageObj.en : languageObj.sk;
+
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -23,7 +47,7 @@ function TopMenu() {
             className={styles.menu__button}
             onClick={() => handleScrollTo("Home")}
           >
-            Home
+            {currentLanguage.home}
           </button>
         </li>
         <li className={styles.menu__item}>
@@ -31,7 +55,7 @@ function TopMenu() {
             className={styles.menu__button}
             onClick={() => handleScrollTo("Portfolio")}
           >
-            Portfolio
+            {currentLanguage.portfolio}
           </button>
         </li>
         <li className={styles.menu__item}>
@@ -39,7 +63,7 @@ function TopMenu() {
             className={styles.menu__button}
             onClick={() => handleScrollTo("AboutMe")}
           >
-            About me
+            {currentLanguage.aboutMe}
           </button>
         </li>
         <li className={styles.menu__item}>
@@ -47,11 +71,11 @@ function TopMenu() {
             className={styles.menu__button}
             onClick={() => handleScrollTo("Contact")}
           >
-            Contact
+            {currentLanguage.contact}
           </button>
         </li>
       </ul>
-      <LanguageMenu />
+      {windowWidth < 848 ? "" : <LanguageMenu />}
     </div>
   );
 }

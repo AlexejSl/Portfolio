@@ -1,8 +1,42 @@
+import { useLanguage } from "../../store/LanguageContext";
 import styles from "./SideNav.module.scss";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
+export type languageObj = {
+  en: {
+    home: string;
+    portfolio: string;
+    aboutMe: string;
+    contact: string;
+  };
+  sk: {
+    home: string;
+    portfolio: string;
+    aboutMe: string;
+    contact: string;
+  };
+};
+
+const languageObj: languageObj = {
+  en: {
+    home: "Home",
+    portfolio: "Portfolio",
+    aboutMe: "About me",
+    contact: "Contact",
+  },
+  sk: {
+    home: "Domov",
+    portfolio: "Portfólio",
+    aboutMe: "O mne",
+    contact: "Kontakt",
+  },
+};
 
 function SideNav() {
   const [activeSection, setActiveSection] = useState("Home");
+
+  const { isEnglish } = useLanguage();
+  const currentLanguage = isEnglish ? languageObj.en : languageObj.sk;
 
   useEffect(() => {
     const observerOptions = {
@@ -47,7 +81,7 @@ function SideNav() {
             : styles.sideNav__item
         }`}
       >
-        {activeSection === "Home" ? "Home" : ""}
+        {activeSection === "Home" ? currentLanguage.home : ""}
       </p>
       <p
         className={`${
@@ -56,7 +90,7 @@ function SideNav() {
             : styles.sideNav__item
         }`}
       >
-        {activeSection === "Portfolio" ? "Portfolio" : ""}
+        {activeSection === "Portfolio" ? currentLanguage.portfolio : ""}
       </p>
       <p
         className={`${
@@ -65,7 +99,7 @@ function SideNav() {
             : styles.sideNav__item
         }`}
       >
-        {activeSection === "AboutMe" ? "About me" : ""}
+        {activeSection === "AboutMe" ? currentLanguage.aboutMe : ""}
       </p>
       <p
         className={`${
@@ -74,7 +108,7 @@ function SideNav() {
             : styles.sideNav__item
         }`}
       >
-        {activeSection === "Contact" ? "Contact" : ""}
+        {activeSection === "Contact" ? currentLanguage.contact : ""}
       </p>
     </div>
   );

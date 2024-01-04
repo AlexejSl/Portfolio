@@ -6,39 +6,73 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto;
   padding-top: 6.8rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: $bp-small) {
+    height: 80rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    height: 74rem;
+  }
 }
 
 .homeTextBox {
   grid-row: 1;
   grid-column: 1;
-  padding: 40rem 0 10rem 15vw;
+  margin: 40rem 0 10rem 15vw;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: $bp-large) {
+    margin: 40rem 0 10rem 12vw;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 40rem 0 10rem 6vw;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    justify-self: center;
+    align-items: center;
+    margin: 0;
+    grid-column: 1/-1;
+    padding: 5rem 8rem;
+    max-width: 62rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 5rem 1.5rem;
+    max-width: 50rem;
+  }
 
   &__header {
     font-size: 6rem;
     color: $fontColor;
     font-weight: 300;
     white-space: nowrap;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 3.5rem;
+    }
   }
 
   &__text {
     font-size: 1.8rem;
     color: $fontColor;
-  }
 
-  // &__button {
-  //   display: flex;
-  //   margin: 2rem 10rem 2rem auto;
-  //   padding: 1rem 2rem;
-  //   border-radius: 50px;
-  //   background-color: $secondaryColor;
-  //   border: none;
-  //   color: $fontColor;
-  //   font-size: $baseFontSize;
-  //   cursor: pointer;
-  // }
+    @media only screen and (max-width: $bp-medium) {
+      font-size: $baseFontSize;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-left: 1.5rem;
+    }
+  }
 }
 
 .orange {
@@ -55,10 +89,18 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-large) {
+    height: 9rem;
+  }
+
   &__text {
     color: $fontColor;
     font-size: $headingFontSize;
-    // margin-left: 10vw;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.8rem;
+      margin: 0 0.7rem;
+    }
   }
 
   &__divider {
@@ -68,6 +110,11 @@
     border-radius: 20%;
     margin-left: 2rem;
     margin-right: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
   }
 
   &__list {
@@ -77,6 +124,19 @@
     &_icon {
       max-height: 7rem;
       margin: 0 4rem;
+
+      @media only screen and (max-width: $bp-large) {
+        max-height: 6rem;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0 2rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        margin: 0 0.7rem;
+        max-height: 3.5rem;
+      }
     }
   }
 }
@@ -86,12 +146,28 @@
   grid-column: 2/-1;
   grid-row: 1;
   position: relative;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-column: 1 /-1;
+  }
 }
 
 .MyImg {
-  height: 45rem;
+  height: 46rem;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  @media only screen and (max-width: $bp-large) {
+    height: 42rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    height: 38rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    height: 35rem;
+  }
 }

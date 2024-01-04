@@ -1,10 +1,18 @@
+//Colours
 $primaryColor: #191a1f;
 $secondaryColor: #ff312e;
 $fontColor: #f7f7f7;
 $greyColor: #333138;
 $secondaryGreyColor: #4a494b;
 
-// Font Variables
+// Font size
 $baseFontSize: 1.6rem;
 $headingFontSize: 2.4rem;
 $headingFontSizeBig: 3rem;
+
+//Screen Size
+$bp-largest: 96em; //1536px
+$bp-large: 82em; //1312px
+$bp-medium: 66em; //1056px
+$bp-small: 53em; //848px
+$bp-smallest: 43em; //688px
