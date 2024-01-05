@@ -121,6 +121,10 @@
     display: flex;
     list-style-type: none;
 
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
     &_icon {
       max-height: 7rem;
       margin: 0 4rem;

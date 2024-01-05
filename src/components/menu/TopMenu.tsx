@@ -31,7 +31,7 @@ function TopMenu({ windowWidth }: TopMenuProps) {
     if (element) {
       const scrollOptions = {
         behavior: "smooth",
-        block: "center",
+        block: windowWidth < 750 ? "start" : "center",
         inline: "start",
       } as ScrollIntoViewOptions;
 
