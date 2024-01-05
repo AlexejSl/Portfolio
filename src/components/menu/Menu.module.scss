@@ -1,6 +1,6 @@
 @import "../../variables";
 
-@keyframes moveInLeft {
+@keyframes moveInTop {
   0% {
     opacity: 0;
     transform: translateY(-10rem);
@@ -33,7 +33,7 @@
   padding: 2rem 0;
   list-style-type: none;
 
-  animation-name: moveInLeft;
+  animation-name: moveInTop;
   animation-duration: 1s;
   animation-timing-function: ease-out;
 
