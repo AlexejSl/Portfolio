@@ -10,7 +10,7 @@ type LanguageObj = {
   en: {
     mainHeader: string;
     textPart1: string;
-    actaLudologica: string;
+
     textPart2: string;
     textPart3: string;
     secondaryHeader: string;
@@ -18,7 +18,7 @@ type LanguageObj = {
   sk: {
     mainHeader: string;
     textPart1: string;
-    actaLudologica: string;
+
     textPart2: string;
     textPart3: string;
     secondaryHeader: string;
@@ -30,9 +30,7 @@ const languageObj: LanguageObj = {
     mainHeader: `About me`,
     textPart1: `I graduated with a Bachelor's degree in
     the field of Theory of Digital Games from the University of SS. Cyril
-    and Methodius in Trnava. My most significant achievement during my studies in the Theory of Digital Games
-     was the publication of my Bachelor's degree research about women in the world of digital games in the journal`,
-    actaLudologica: `Acta Ludologica`,
+    and Methodius in Trnava.`,
     textPart2: `My journey into the world of technology began during my high school
     years when I became interested in computer hardware, and I used to build and
     repair computers for my friends. My initial exposure to web
@@ -49,9 +47,7 @@ const languageObj: LanguageObj = {
   sk: {
     mainHeader: `O mne`,
     textPart1: `Absolvoval som bakalárske štúdium v odbore Teória digitálnych hier na 
-    Univerzite sv. Cyrila a Metoda v Trnave. Mojim najvýznamnejším úspechom počas štúdia 
-    bolo zverejnenie mojej bakalárskej práce o ženách vo svete digitálnych hier vo vedeckom časopise zaoberajúcom sa digitálnymi hrami`,
-    actaLudologica: `Acta Ludologica`,
+    Univerzite sv. Cyrila a Metoda v Trnave.`,
     textPart2: `Moja cesta do sveta technológií sa začala počas mojej strednej školy, kedy som sa začal zaujímať o hardvér počítačov, staval som a opravoval počítače pre mojich kamarátov.
      Moja prvá skúsenosť s vývojom webových stránok bol kurz web developmentu počas prvého ročníka univerzity.`,
     textPart3: `Po ukončení štúdia som si začal zlepšovať svoje zručnosti v oblasti web developmentu pomocou kurzov na platforme Udemy
@@ -64,7 +60,6 @@ const languageObj: LanguageObj = {
 type currentLanguage = {
   mainHeader: string;
   textPart1: string;
-  actaLudologica: string;
   textPart2: string;
   textPart3: string;
   secondaryHeader: string;
@@ -80,16 +75,7 @@ function AboutMe() {
     <div className={styles.aboutMe} id="AboutMe">
       <h2 className={styles.aboutMe__header}>{currentLanguage.mainHeader}</h2>
       <div className={styles.aboutMe__text}>
-        <p>
-          {currentLanguage.textPart1}{" "}
-          <a
-            className={styles.orange}
-            href="https://actaludologica.com/women-in-the-world-of-digital-games-the-case-of-slovakia/"
-          >
-            {currentLanguage.actaLudologica}
-          </a>
-          .
-        </p>
+        <p>{currentLanguage.textPart1} </p>
         <br />
         <p>{currentLanguage.textPart2}</p>
         <br />
